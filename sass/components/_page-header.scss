@@ -1,0 +1,90 @@
+.header-section {
+  border-bottom: 1px solid $colorBorder;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+
+  .accent {
+    color: $colorAccent;
+  }
+
+  .site-nav {
+    display: flex;
+  }
+
+  .site-nav &__item + &__item {
+    margin-left: 50px;
+  }
+
+  .site-nav {
+    @extend %link;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $colorPrimaryText;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+
+  .site-nav &__page--current {
+    display: block;
+    position: relative;
+    color: $colorAccent;
+  }
+
+  &__item &__page--current::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+    background: $colorAccent;
+  }
+
+  .auth-nav {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .auth-nav &__item + &__item {
+    margin-left: 50px;
+  }
+
+  .auth-nav {
+    @extend %link;
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $colorSecondaryText;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+
+  &__contact {
+    display: flex;
+
+    color: $colorIcon;
+  }
+
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+
+  .link:hover,
+  .link:focus {
+    color: $colorAccent;
+  }
+}

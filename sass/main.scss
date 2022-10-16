@@ -1,0 +1,365 @@
+@import "./utils/variables";
+@import "./utils/vs";
+@import "./utils/placeholder";
+@import "./utils/mixin";
+@import "./base/normalize";
+@import "./components/page-header";
+@import "./components/page-footer";
+@import "./components/modal";
+@import "./components/logo";
+
+body {
+  color: $colorPrimaryText;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.list {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+input {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  outline: none;
+}
+
+/* Hero Section */
+
+.hero-section {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+}
+
+.hero-section__title {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 696px;
+
+  color: $colorBackground;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 4px;
+  margin-top: 0px;
+  padding: 10px 32px;
+  min-width: 216px;
+  text-align: center;
+  cursor: pointer;
+  border-color: transparent;
+
+  color: $colorBackground;
+  background-color: $colorAccent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-section > .btn:hover,
+.hero-section > .btn:focus {
+  color: $colorBackground;
+  background-color: $colorButtonActive;
+}
+
+.overlay {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../../goit-markup-hw-04/images/Hero_img.jpg);
+  background-repeat: no-repeat;
+  background-color: $colorHeroBackground;
+  background-size: cover;
+}
+
+/* Section Benefits */
+
+.benefit-section {
+  padding-top: 94px;
+  padding-bottom: 47px;
+}
+
+.benefit-section__container {
+  max-width: 270px;
+}
+
+.benefit-section__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+
+  background: $colorButtonPrimary;
+}
+
+.benefit-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+}
+
+.icon-container__symbol {
+  width: 70px;
+  height: 70px;
+}
+
+.title {
+  margin-top: 0px;
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.icon-container__text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  color: $colorSecondaryText;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.social-container {
+  display: flex;
+  outline: 1px solid black;
+}
+
+/* Section Work Type */
+
+.section-work {
+  padding-top: 47px;
+  padding-bottom: 94px;
+}
+
+.work-product {
+  display: flex;
+  justify-content: center;
+}
+
+.work-product .work-product__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.work-product__img {
+  display: block;
+  max-width: 100%;
+}
+
+.section-title {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+}
+
+.work-product__container {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-product__decoration {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 370px;
+  height: 70px;
+  left: 0;
+  bottom: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.overlay-product__text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $colorBackground;
+}
+
+/* Section Our Team */
+
+.section-team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  background-color: $colorButtonPrimary;
+}
+
+.team-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-list__info {
+  max-width: 270px;
+  text-align: center;
+
+  background-color: $colorBackground;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.person-info {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team-title {
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+}
+
+.team-title-text {
+  margin-top: 10px;
+  margin-bottom: 0px;
+
+  color: $colorSecondaryText;
+  font-size: 16px;
+  line-height: 1.18;
+}
+
+.social-list {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  justify-content: center;
+
+  &__link {
+    display: flex;
+    padding: 12px 12px;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    color: $colorIcon;
+    background-color: $colorBackground;
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__symbol {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: $colorAccent;
+    color: $colorBackground;
+  }
+
+  &__link:hover &__symbol,
+  &__link:focus &__symbol {
+    fill: $colorBackground;
+  }
+}
+/* Regular Clients Section */
+
+.cliets-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.company-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  &__link {
+    display: flex;
+    padding: 16px 32px 16px 32px;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+
+    color: $colorIcon;
+    border: 1px solid $colorIcon;
+    border-radius: 4px;
+    transition-property: border-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $colorAccent;
+    border-color: $colorAccent;
+  }
+
+  &__symbol {
+    width: 106px;
+    height: 60px;
+
+    fill: currentColor;
+  }
+}
+/* Footer */
+
+/* Modal */
+
+/* Page Portfolio */
