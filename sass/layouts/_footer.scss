@@ -1,0 +1,132 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: var(--secondary-background-color);
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.logo.logo-footer {
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.contact-list.list {
+  @include font(14px, $fw, 1.71, $ls);
+
+  font-style: normal;
+}
+
+.contact-address.link {
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  color: var(--primary-background-color);
+  transition-property: color;
+  @extend %transDtiming;
+}
+
+.contact-address:hover,
+.contact-address:focus {
+  color: var(--accent-color);
+}
+.contact-item.link {
+  display: block;
+  margin-top: 9px;
+  margin-bottom: 0px;
+
+  color: var(--contact-color);
+  transition-property: color;
+  @extend %transDtiming;
+}
+
+.contact-item:hover,
+.contact-item:focus {
+  color: var(--accent-color);
+}
+
+.social-footer {
+  display: block;
+  align-items: baseline;
+
+  margin-left: 70px;
+}
+
+.footer-text {
+  @include font(14px, 700, 1.14, 00.03em);
+
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 20px;
+
+  color: var(--primary-background-color);
+}
+
+.footer-social {
+  display: flex;
+  margin-top: 20px;
+  margin-right: auto;
+  gap: 10px;
+}
+
+.footer-item {
+  color: var(--primary-background-color);
+  background-color: var(--footer-item-color);
+}
+
+.footer-form {
+  display: block;
+  align-items: baseline;
+  margin-left: 93px;
+}
+
+.footer-form-elements {
+  margin-top: 20px;
+}
+
+.footer-input {
+  @include font(16px, $fw, 1.25, $ls);
+  @include size(50px, 358px);
+
+  padding: 15px 16px;
+
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.btn-footer {
+  display: inline-flex;
+  width: 200px;
+  margin-left: 12px;
+  padding-left: 28px;
+  padding-top: 10px;
+
+  padding-bottom: 10px;
+
+  transition-property: background-color;
+  @extend %transDtiming;
+}
+
+.btn-footer::after {
+  @include size(24px, 24px);
+
+  content: "";
+
+  margin-left: 10px;
+  background-image: url(../images/icons/icon\ send.svg);
+}
+
+.btn-footer:hover,
+.btn-footer-focus {
+  color: var(--primary-background-color);
+  background-color: var(--active-btn-color);
+}

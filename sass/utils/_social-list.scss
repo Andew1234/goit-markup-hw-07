@@ -1,0 +1,39 @@
+.social-list {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.social-link {
+  @include size(44px, 44px);
+  @extend %flex-center;
+  @extend %transDtiming;
+
+  padding: 12px 12px;
+
+  border-radius: 50%;
+
+  color: var(--icon-color);
+  background-color: var(--primary-background-color);
+  transition-property: background-color, color;
+}
+
+.social-item-symbol {
+  @include size(20px, 20px);
+  @extend %transDtiming;
+
+  fill: currentColor;
+  transition-property: fill;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-background-color);
+}
+
+.social-link:hover .social-item-symbol,
+.social-link:focus .social-item-symbol {
+  fill: var(--primary-background-color);
+}

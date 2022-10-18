@@ -1,0 +1,85 @@
+.main-portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.portfolio-title {
+  @include font(16px, 700, 2, $ls);
+
+  margin-top: 0;
+  margin-bottom: 4px;
+
+  color: var(--primary-text-color);
+}
+
+.portfolio-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  color: var(--secondary-text-color);
+  font-size: 16px;
+  line-height: 1.88;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card-text {
+  padding: 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+
+.card-link {
+  display: block;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-link:hover,
+.card-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.card-link:hover .galary-overlay,
+.card-link:focus .galary-overlay {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.thumb {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.galary-overlay {
+  @include size(100%, 100%);
+
+  display: flex;
+  align-items: center;
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+  transform: translateY(100%);
+  transition-property: transform;
+  @extend %transDtiming;
+}
+
+.overlay-text {
+  @include font(18px, $fw, 1.55, 00.03em);
+
+  color: var(--primary-background-color);
+}
