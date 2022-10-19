@@ -11,12 +11,6 @@ body {
   text-decoration: none;
 }
 
-.link {
-  text-decoration: none;
-  transition-property: color;
-  @extend %transDtiming;
-}
-
 .container {
   width: 1200px;
   padding-left: 15px;
