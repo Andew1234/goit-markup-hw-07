@@ -5,35 +5,38 @@
   justify-content: center;
 }
 
-.social-link {
-  @include size(44px, 44px);
-  @extend %flex-center;
-  @extend %transDtiming;
+.social-list__link {
+  @include centeredFlex();
 
   padding: 12px 12px;
 
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
 
   color: var(--icon-color);
   background-color: var(--primary-background-color);
   transition-property: background-color, color;
-}
 
-.social-item-symbol {
-  @include size(20px, 20px);
   @extend %transDtiming;
 
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-background-color);
+  }
+
+  &:hover .social-list__symbol,
+  &:focus .social-list__symbol {
+    fill: var(--primary-background-color);
+  }
+}
+
+.social-list__symbol {
+  width: 20px;
+  height: 20px;
   fill: currentColor;
   transition-property: fill;
-}
 
-.social-link:hover,
-.social-link:focus {
-  background-color: var(--accent-color);
-  color: var(--primary-background-color);
-}
-
-.social-link:hover .social-item-symbol,
-.social-link:focus .social-item-symbol {
-  fill: var(--primary-background-color);
+  @extend %transDtiming;
 }

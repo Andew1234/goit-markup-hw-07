@@ -18,6 +18,13 @@ body {
   margin: 0 auto;
 }
 
+.link {
+  @extend %transDtiming;
+
+  text-decoration: none;
+  transition-property: color;
+}
+
 input {
   outline: none;
 }

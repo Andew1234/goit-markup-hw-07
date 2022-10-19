@@ -3,9 +3,7 @@
   padding-bottom: 200px;
   text-align: center;
 
-  .&__title {
-    @include font(44px, 900, 1.36, 0.06em);
-
+  &__title {
     margin-top: 0px;
     margin-bottom: 30px;
     margin-left: auto;
@@ -14,8 +12,19 @@
 
     color: var(--primary-background-color);
     text-transform: uppercase;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+  }
+
+  & > .btn:hover,
+  & > .btn:focus {
+    color: var(--primary-background-color);
+    background-color: var(--active-btn-color);
   }
 }
+
 .overlay {
   max-width: 1600px;
   margin-left: auto;

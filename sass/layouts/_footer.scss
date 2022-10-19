@@ -5,7 +5,7 @@
   background-color: var(--secondary-background-color);
 }
 
-.footer-container {
+.footer__container {
   display: flex;
   align-items: baseline;
 }
@@ -16,42 +16,44 @@
   margin-bottom: 20px;
 }
 
-.contact-list.list {
-  @include font(14px, $fw, 1.71, $ls);
-
+.footer-contact__list.list {
   font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
 }
 
-.contact-address.link {
+.footer-contact__address.link {
   display: block;
   margin-top: 0px;
   margin-bottom: 0px;
 
   color: var(--primary-background-color);
   transition-property: color;
+
   @extend %transDtiming;
 }
 
-.contact-address:hover,
-.contact-address:focus {
+.footer-contact__address:hover,
+.footer-contact__address:focus {
   color: var(--accent-color);
 }
-.contact-item.link {
+.footer-contact__link.link {
   display: block;
   margin-top: 9px;
   margin-bottom: 0px;
 
   color: var(--contact-color);
   transition-property: color;
+
   @extend %transDtiming;
 }
 
-.contact-item:hover,
-.contact-item:focus {
+.footer-contact__link:hover,
+.footer-contact__link:focus {
   color: var(--accent-color);
 }
 
-.social-footer {
+.footer-social {
   display: block;
   align-items: baseline;
 
@@ -59,8 +61,10 @@
 }
 
 .footer-text {
-  @include font(14px, 700, 1.14, 00.03em);
-
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-top: 0px;
   margin-bottom: 20px;
@@ -68,7 +72,7 @@
   color: var(--primary-background-color);
 }
 
-.footer-social {
+.footer-social__list {
   display: flex;
   margin-top: 20px;
   margin-right: auto;
@@ -80,20 +84,22 @@
   background-color: var(--footer-item-color);
 }
 
-.footer-form {
+.footer-container {
   display: block;
   align-items: baseline;
   margin-left: 93px;
 }
 
-.footer-form-elements {
+.footer-form {
   margin-top: 20px;
 }
 
-.footer-input {
-  @include font(16px, $fw, 1.25, $ls);
-  @include size(50px, 358px);
+.footer-form__input {
+  height: 50px;
+  width: 358px;
 
+  font-size: 16px;
+  line-height: 1.25;
   padding: 15px 16px;
 
   color: rgba(255, 255, 255, 0.6);
@@ -113,20 +119,20 @@
   padding-bottom: 10px;
 
   transition-property: background-color;
+
   @extend %transDtiming;
-}
 
-.btn-footer::after {
-  @include size(24px, 24px);
+  &::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    background-image: url(../images/icons/icon\ send.svg);
+  }
 
-  content: "";
-
-  margin-left: 10px;
-  background-image: url(../images/icons/icon\ send.svg);
-}
-
-.btn-footer:hover,
-.btn-footer-focus {
-  color: var(--primary-background-color);
-  background-color: var(--active-btn-color);
+  &:hover,
+  &:focus {
+    color: var(--primary-background-color);
+    background-color: var(--active-btn-color);
+  }
 }

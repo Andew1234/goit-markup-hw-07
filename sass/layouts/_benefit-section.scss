@@ -12,43 +12,37 @@
   justify-content: space-between;
 }
 
-.container-icon {
-  @include size(120px, 270px);
-  @extend %flex-center;
+.icon-container {
+  @include centeredFlex();
 
+  width: 270px;
+  height: 120px;
   margin-bottom: 30px;
   border-radius: 4px;
 
   background: var(--primary-btn-color);
 }
 
-.benefit-title {
-  @include font(14px, 700, 1.14, $ls);
+.icon-container__symbol {
+  width: 70px;
+  height: 70px;
 }
 
-.container-icon__symbol {
-  @include size(70px, 70px);
-}
-
-.title {
-  @include font(14px, 700, 1.14, $ls);
-
+.container-benefit__title {
   margin-top: 0px;
   margin-bottom: 10px;
 
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
-.title-text {
+.container-benefit__text {
   margin-top: 0px;
   margin-bottom: 0px;
 
   color: var(--secondary-text-color);
   font-size: 14px;
   line-height: 1.71;
-}
-
-.social-container {
-  display: flex;
-  outline: 1px solid black;
 }

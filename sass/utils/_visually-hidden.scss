@@ -1,6 +1,4 @@
 .visually-hidden {
-  @include size(1px, 1px);
-
   position: absolute;
   white-space: nowrap;
   width: 1px;
